@@ -8,7 +8,7 @@ export async function Messages() {
   return (
     <>
       {data.map(({ origin, user, content, id, date }) => (
-        <Message.Root key={id} variant={origin}>
+        <Message.Root key={id} variant={origin as "to" | "from"}>
           <Message.Avatar src={user.avatar} />
           <Message.Container>
             <Message.Header>
