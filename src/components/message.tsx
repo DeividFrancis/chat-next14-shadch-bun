@@ -5,6 +5,7 @@ import { tv } from "tailwind-variants";
 import * as SCNAvatar from "./ui/avatar";
 import { VariantProps } from "class-variance-authority";
 import dayjs from "dayjs";
+import { Avatar as DefaultAvatar } from "./avatar";
 
 const msg = tv({
   slots: {
@@ -71,11 +72,4 @@ export function Content({ children }: PropsWithChildren) {
   return <div className={content()}>{children}</div>;
 }
 
-export function Avatar({ src }: { src: string }) {
-  return (
-    <SCNAvatar.Avatar>
-      <SCNAvatar.AvatarImage src={src} />
-      <SCNAvatar.AvatarFallback>CN</SCNAvatar.AvatarFallback>
-    </SCNAvatar.Avatar>
-  );
-}
+export const Avatar = DefaultAvatar;

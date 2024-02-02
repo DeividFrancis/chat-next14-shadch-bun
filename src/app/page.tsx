@@ -9,13 +9,16 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "~/components/ui/resizable";
+import { Chats } from "~/components/chats";
 
 export default function Home() {
   return (
     <div className="w-screen h-screen bg-slate-100 sm:py-14">
       <ChatContainer>
         <ResizablePanelGroup direction="horizontal">
-          <ResizablePanel defaultSize={25}>Chats</ResizablePanel>
+          <ResizablePanel defaultSize={25}>
+            <Chats />
+          </ResizablePanel>
           <ResizableHandle withHandle />
           <ResizablePanel defaultSize={75}>
             <div className="flex h-full flex-col">
