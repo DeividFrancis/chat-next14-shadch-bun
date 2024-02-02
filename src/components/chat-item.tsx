@@ -6,15 +6,15 @@ const chat = tv({
   slots: {
     root: "flex items-center gap-2 transition-all cursor-pointer hover:bg-secondary px-2 py-1 rounded-xl",
     name: "text-sm font-semibold",
-    message: "text-sm text-foreground line-clamp-1 py-1",
-    content: "w-full border-b border-muted",
+    message: "text-sm text-muted-foreground line-clamp-1 py-1",
+    content: "w-full",
   },
 });
 
 const { root, name, message, content } = chat();
 
 export function Root({ children }: PropsWithChildren) {
-  return <li className={root()}>{children}</li>;
+  return <div className={root()}>{children}</div>;
 }
 export const Avatar = DefaultAvatar;
 

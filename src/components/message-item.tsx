@@ -25,7 +25,8 @@ const msg = tv({
       },
       from: {
         root: "self-start",
-        container: "border bg-primary-foreground text-primary rounded-tl-none",
+        container:
+          "border bg-secondary text-secondary-foreground rounded-tl-none",
       },
     },
   },
